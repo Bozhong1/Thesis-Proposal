@@ -1,0 +1,40 @@
+name: Compile LaTeX
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'main.tex'
+      - '.github/workflows/latex.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Prepare Tectonic
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/tectonic-bin"
+          curl --fail --location --retry 3 'https://github.com/tectonic-typesetting/tectonic/releases/download/tectonic%400.17.0/tectonic-0.17.0-x86_64-unknown-linux-musl.tar.gz' --output "$RUNNER_TEMP/tectonic.tar.gz"
+          echo "8533d07f9ccbd7a65824b9e0459041bca34af1eb33daba48f59215593753a3b7  $RUNNER_TEMP/tectonic.tar.gz" | sha256sum --check
+          tar --extract --gzip --file "$RUNNER_TEMP/tectonic.tar.gz" --directory "$RUNNER_TEMP/tectonic-bin"
+      - name: Compile document
+        shell: bash
+        run: |
+          mkdir -p build
+          "$RUNNER_TEMP/tectonic-bin/tectonic" --keep-logs --outdir build main.tex
+      - name: Save compiled PDF
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: literature-and-observations-pdf
+          path: build/main.pdf
+          if-no-files-found: error
+          retention-days: 14

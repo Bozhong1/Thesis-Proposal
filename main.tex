@@ -1,0 +1,148 @@
+% !TeX program = xelatex
+% Self-contained Overleaf entry point.
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype}
+\usepackage{cite}
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.6em}
+\setlength{\emergencystretch}{2em}
+\newcommand{\observation}[2]{\par\noindent\textbf{Observation #1.} #2\par}
+
+\title{Literature Synthesis and Observations}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Operating Context and Traffic-Management Frameworks}
+\label{sec:literature-1}
+
+Urban air mobility (UAM) operating concepts and airspace-design literature link airspace organization with aircraft capabilities, operating practices, and coordination responsibilities~\cite{L088,L024}. System-level studies represent traffic management through interacting functions, including access control, flight planning, and conflict management, and examine their effects on shared operations~\cite{L028,L041}.
+
+\observation{1}{A localized loss of airspace availability is a traffic-coordination problem as well as a routing problem, because affected flights share operating rules and resources with surrounding traffic.}
+
+\section{Airspace Structure and Maneuver Feasibility}
+\label{sec:literature-2}
+
+Geometric analyses identify how airspace width and altitude affect connectivity, while corridor-protection and contingency-planning studies relate maneuvering space to aircraft motion constraints~\cite{L037,L036,L020}. Trajectory planning around emergency traffic further combines corridor containment, protected regions, and turning limits~\cite{L015}.
+
+\observation{2}{Maneuver feasibility depends jointly on the remaining airspace, aircraft performance, and surrounding traffic; geometric connectivity alone cannot establish an executable response.}
+
+\section{Traffic Planning and Coordination}
+\label{sec:literature-3}
+
+Strategic methods manage planned interactions through flight-level assignments and occupancy timing, while tactical and hybrid approaches address conflicts through different combinations of preflight planning and in-flight coordination~\cite{L013,L017,L051}. Communication-constrained simulations further show that coordination performance depends on the traffic information available to decision-makers~\cite{L053}.
+
+\observation{3}{The decision timing, information requirements, and permitted control actions of an existing method determine whether it can support aircraft already in flight when a blockage occurs.}
+
+\section{Disruption Response and Contingency Management}
+\label{sec:literature-4}
+
+Adaptive replanning supports path and timing changes in disturbed environments, whereas contingency landing management addresses aircraft degradation and the feasibility of reaching a landing site~\cite{L012,L066}. Emergency-trajectory studies also coordinate lower-priority aircraft around priority traffic and examine the propagation or mitigation of resulting delays~\cite{L015,L079}. These capabilities address different initiating events and response objectives~\cite{L012,L066,L079}.
+
+\observation{4}{Emergency-response capability is specific to the event and intended outcome: resolving an immediate conflict, completing an emergency landing, and rejoining a route for continued flight require different completion criteria.}
+
+\section{Network Configuration and Resilience}
+\label{sec:literature-5}
+
+UAM network design connects facility locations, fleet resources, and operating decisions to service provision~\cite{L087}. Disruption-aware design adds backup vertiports and routes to improve expected throughput, although the resulting benefits can differ across origin--destination pairs~\cite{L063}. Node-closure verification separately checks whether diverted flights can be accommodated within available landing capacity under specified routing and travel-time assumptions~\cite{L069}.
+
+\observation{5}{The contribution of redundancy depends on where it is available and how redirected traffic uses it; aggregate network performance does not establish adequate contingency support for every affected flight.}
+
+\section{Performance Evaluation, Uncertainty, and Verification}
+\label{sec:literature-6}
+
+Simulation studies evaluate throughput, delay, and separation-related outcomes, while service-level methods distinguish aircraft, passenger, and facility performance~\cite{L041,L090}. Verification studies establish properties such as landing-capacity compliance or contingency-trajectory feasibility under specified assumptions~\cite{L066,L069}. Probabilistic airspace models additionally make spatial protection conditional on the uncertainty representation and selected risk level~\cite{L085}.
+
+\observation{6}{Feasibility, safety-related properties, and service performance require distinct evidence; an evaluation must identify the aircraft and network effects being measured and the assumptions under which its conclusions hold.}
+
+\section{Disruption Recovery and Joint Design in Related Transportation Systems}
+\label{sec:literature-7}
+
+Recovery studies in railway and airline networks connect infrastructure availability and reassignment decisions to service continuity and subsequent delays~\cite{L054,L060,L004}. Railway infrastructure comparisons evaluate the combined effects of layout and dispatching strategies, while UAM architecture studies likewise find that the performance of spatial arrangements depends on traffic-management choices~\cite{L028,L051,L046}.
+
+\observation{7}{Corridor design improvement requires evaluating spatial changes together with the operating procedures that use them, because the value of a design change depends on traffic coordination and disruption conditions.}
+
+\begin{thebibliography}{99}
+
+\bibitem{L088}
+Federal Aviation Administration, ``Urban Air Mobility (UAM) Concept of Operations,'' Ver. 2.0, NextGen Office, Washington, D.C., April 2023.
+
+\bibitem{L024}
+Bauranov, A., and Rakas, J., ``Designing Airspace for Urban Air Mobility: A Review of Concepts and Approaches,'' \emph{Progress in Aerospace Sciences}, Vol. 125, 2021, Article 100726. \url{https://doi.org/10.1016/j.paerosci.2021.100726}.
+
+\bibitem{L028}
+Ram\'{e}e, C., and Mavris, D., ``Development of a Framework to Compare Low-Altitude Unmanned Air Traffic Management Systems,'' \emph{AIAA Scitech 2021 Forum}, AIAA Paper 2021-0812, 2021. \url{https://doi.org/10.2514/6.2021-0812}.
+
+\bibitem{L041}
+Prince, J., Guerreiro, N., Denham, C., McClain, T., Ghatas, R., and White, T., ``Feasibility and Scalability of Midterm UAM Operations in Cooperative Airspace: Class B Airspace Simulation Evaluation,'' NASA/TM-20250009519, NASA Langley Research Center, Dec. 2025.
+
+\bibitem{L037}
+Cho, J., and Yoon, Y., ``Extracting the Topology of Urban Airspace Through Graph Abstraction,'' \emph{Transportation Research Part C: Emerging Technologies}, Vol. 127, 2021, Article 103116. \url{https://doi.org/10.1016/j.trc.2021.103116}.
+
+\bibitem{L036}
+Choi, S.-i., Yang, Y., and Kim, H., ``Establishing Corridor Design Standards for Operational Safety of Urban Air Mobility Vehicles,'' \emph{International Journal of Aeronautical and Space Sciences}, Vol. 27, 2026, pp. 863--875. \url{https://doi.org/10.1007/s42405-025-00960-4}.
+
+\bibitem{L020}
+Ortlieb, M., Adolf, F.-M., and Holzapfel, F., ``Computation of a Database of Trajectories and Primitives for Decision-Based Contingency Management of UAVs over Congested Areas,'' \emph{2021 IEEE/AIAA 40th Digital Avionics Systems Conference (DASC)}, 2021. \url{https://doi.org/10.1109/DASC52595.2021.9594333}.
+
+\bibitem{L015}
+Variny, M. R., Moleski, T. W., and Wilhelm, J. P., ``Cascading Delay Mitigation with Quadratic B\'{e}zier Curve Trajectory Planning,'' \emph{AIAA SCITECH 2025 Forum}, AIAA Paper 2025-1545, 2025. \url{https://doi.org/10.2514/6.2025-1545}.
+
+\bibitem{L013}
+Tang, H., Zhang, Y., Mohmoodian, V., and Charkhgard, H., ``Automated Flight Planning of High-Density Urban Air Mobility,'' \emph{Transportation Research Part C: Emerging Technologies}, Vol. 131, 2021, Article 103324. \url{https://doi.org/10.1016/j.trc.2021.103324}.
+
+\bibitem{L017}
+Pang, B., Low, K. H., and Duong, V. N., ``Chance-Constrained UAM Traffic Flow Optimization with Fast Disruption Recovery under Uncertain Waypoint Occupancy Time,'' \emph{Transportation Research Part C: Emerging Technologies}, Vol. 161, 2024, Article 104547. \url{https://doi.org/10.1016/j.trc.2024.104547}.
+
+\bibitem{L051}
+Veytia, A. M., Badea, C. A., Ellerbroek, J., Hoekstra, J., Patrinopoulou, N., Daramouskas, I., Lappas, V., Kostopoulos, V., de Vries, V., van Ham, J., Sunil, E., Menendez Ponte Alonso, P., Rodrigo Villazon Terrazas, J., Bereziat, D., Vidosavljevic, A., and Sedov, L., ``Metropolis II: Benefits of Centralised Separation Management in High-Density Urban Airspace,'' \emph{12th SESAR Innovation Days}, Budapest, Hungary, 2022, pp. 1--8.
+
+\bibitem{L053}
+Yang, X., Deng, L., Liu, J., Wei, P., and Li, H., ``Multi-Agent Autonomous Operations in Urban Air Mobility with Communication Constraints,'' \emph{AIAA SciTech 2020 Forum}, AIAA Paper 2020-1839, 2020. \url{https://doi.org/10.2514/6.2020-1839}.
+
+\bibitem{L012}
+Wu, Y., and Low, K. H., ``An Adaptive Path Replanning Method for Coordinated Operations of Drone in Dynamic Urban Environments,'' \emph{IEEE Systems Journal}, Vol. 15, No. 3, 2021, pp. 4600--4611. \url{https://doi.org/10.1109/JSYST.2020.3017677}.
+
+\bibitem{L066}
+Kim, J., Sharma, P., Castagno, J., Neogi, N., and Atkins, E., ``Runtime Performance Verification of Assured Contingency Landing Management for Advanced Air Mobility,'' \emph{Journal of Aerospace Information Systems}, Vol. 23, No. 2, 2026, pp. 155--173. \url{https://doi.org/10.2514/1.I011675}.
+
+\bibitem{L079}
+Pinto Neto, E. C., Baum, D., de Almeida, J. R., Jr., Camargo, J. B., Jr., and Cugnasca, P. S., ``Towards Planning Urban Air Mobility (UAM) Landing Trajectories in Emergencies,'' \emph{Journal of Intelligent \& Robotic Systems}, Vol. 111, 2025, Article 22. \url{https://doi.org/10.1007/s10846-024-02213-0}.
+
+\bibitem{L087}
+Wang, Z., Lv, D., Jia, S., Wang, K., and Qu, X., ``Urban Air Mobility Network Design and Operations Strategy in an Urban Agglomeration,'' \emph{Transportation Research Part E: Logistics and Transportation Review}, Vol. 203, 2025, Article 104316. \url{https://doi.org/10.1016/j.tre.2025.104316}.
+
+\bibitem{L063}
+Wei, Q., Gao, Z., Clarke, J.-P., and Topcu, U., ``Risk-Aware Urban Air Mobility Network Design with Overflow Redundancy,'' \emph{Transportation Research Part B: Methodological}, Vol. 185, 2024, Article 102967. \url{https://doi.org/10.1016/j.trb.2024.102967}.
+
+\bibitem{L069}
+Wei, Q., Nilsson, G., and Coogan, S., ``Safe Schedule Verification for Urban Air Mobility Networks With Node Closures,'' \emph{IEEE Transactions on Control of Network Systems}, Vol. 11, No. 2, 2024, pp. 855--866. \url{https://doi.org/10.1109/TCNS.2023.3314570}.
+
+\bibitem{L090}
+Schweiger, K., and Knabe, F., ``Vertidrome Airside Level of Service: Performance-Based Evaluation of Vertiport Airside Operations,'' \emph{Drones}, Vol. 7, No. 11, 2023, Article 671. \url{https://doi.org/10.3390/drones7110671}.
+
+\bibitem{L085}
+Hu, X., Pang, B., Alam, S., and Feroskhan, M., ``U-Aerodrome: Data-Driven and Risk-Bounded Airspace Reconfiguration for Safe Integration of Urban Air Mobility at Aerodrome,'' \emph{Transportation Research Part C: Emerging Technologies}, Vol. 184, 2026, Article 105506. \url{https://doi.org/10.1016/j.trc.2025.105506}.
+
+\bibitem{L054}
+Trommelen, W., Gkiotsalitis, K., and van Berkum, E. C., ``Optimization Model for Rail Line Crossover Design Considering the Cost of Delay,'' \emph{Transportation Research Record}, Vol. 2676, No. 4, 2022, pp. 554--569. \url{https://doi.org/10.1177/03611981211062488}.
+
+\bibitem{L060}
+Zhu, Y., and Goverde, R. M. P., ``Railway Timetable Rescheduling with Flexible Stopping and Flexible Short-Turning during Disruptions,'' \emph{Transportation Research Part B: Methodological}, Vol. 123, 2019, pp. 149--181. \url{https://doi.org/10.1016/j.trb.2019.02.015}.
+
+\bibitem{L004}
+Suh, D., and Ryerson, M. S., ``A Large Neighborhood Search Heuristic to Establish an Optimal Ad-Hoc Hubbing Strategy in the Wake of a Large-Scale Airport Outage,'' \emph{Journal of Air Transport Management}, Vol. 65, 2017, pp. 156--165. \url{https://doi.org/10.1016/j.jairtraman.2017.06.006}.
+
+\bibitem{L046}
+Tosstorff, M., and Weik, N., ``Infrastructure Design for Robust Operations on Railway Corridors---Quantifying the Combined Effects of Overtaking Tracks and Dispatching Strategies,'' \emph{Transportation Research Procedia}, Vol. 95, 2026, pp. 720--727. \url{https://doi.org/10.1016/j.trpro.2026.02.091}.
+
+\end{thebibliography}
+
+\end{document}

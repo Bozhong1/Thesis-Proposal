@@ -1,6 +1,9 @@
-# Thesis Proposal — Literature Synthesis and Observations
+# Thesis Proposal — Literature Synthesis and Research Formulation
 
-Seven literature–observation pairs covering the operating context, maneuver feasibility, traffic coordination, contingency response, network resilience, evaluation, and joint design.
+A working proposal draft containing:
+
+1. Seven literature–observation pairs covering the operating context, maneuver feasibility, traffic coordination, contingency response, network resilience, evaluation, and joint design.
+2. The study context, complete Research Objective, and three Research Questions with their scope explanations.
 
 ## Open in Overleaf
 
@@ -12,7 +15,7 @@ Import this repository into Overleaf, or download its ZIP from GitHub and upload
 
 The project is self-contained. Citations use LaTeX citation keys, with numeric references in order of first appearance. No separate bibliography file or custom document class is required.
 
-The document contains the literature-and-observations draft; it is not a complete thesis proposal or a university thesis template.
+The document contains the literature synthesis and research formulation. It is a working draft, not a complete thesis proposal or a university thesis template.
 
 ## Compilation check
 

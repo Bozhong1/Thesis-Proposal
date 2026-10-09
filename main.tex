@@ -13,61 +13,109 @@
 \setlength{\emergencystretch}{2em}
 \newcommand{\observation}[2]{\par\noindent\textbf{Observation #1.} #2\par}
 
-\title{Literature Synthesis and Observations}
+\title{Literature Synthesis and Research Formulation}
 \author{}
 \date{}
 
 \begin{document}
 \maketitle
 
-\section{Operating Context and Traffic-Management Frameworks}
+\section{Literature Synthesis and Observations}
+\label{sec:literature-synthesis}
+
+\subsection{Operating Context and Traffic-Management Frameworks}
 \label{sec:literature-1}
 
 Urban air mobility (UAM) operating concepts and airspace-design literature link airspace organization with aircraft capabilities, operating practices, and coordination responsibilities~\cite{L088,L024}. System-level studies represent traffic management through interacting functions, including access control, flight planning, and conflict management, and examine their effects on shared operations~\cite{L028,L041}.
 
 \observation{1}{A localized loss of airspace availability is a traffic-coordination problem as well as a routing problem, because affected flights share operating rules and resources with surrounding traffic.}
 
-\section{Airspace Structure and Maneuver Feasibility}
+\subsection{Airspace Structure and Maneuver Feasibility}
 \label{sec:literature-2}
 
 Geometric analyses identify how airspace width and altitude affect connectivity, while corridor-protection and contingency-planning studies relate maneuvering space to aircraft motion constraints~\cite{L037,L036,L020}. Trajectory planning around emergency traffic further combines corridor containment, protected regions, and turning limits~\cite{L015}.
 
 \observation{2}{Maneuver feasibility depends jointly on the remaining airspace, aircraft performance, and surrounding traffic; geometric connectivity alone cannot establish an executable response.}
 
-\section{Traffic Planning and Coordination}
+\subsection{Traffic Planning and Coordination}
 \label{sec:literature-3}
 
 Strategic methods manage planned interactions through flight-level assignments and occupancy timing, while tactical and hybrid approaches address conflicts through different combinations of preflight planning and in-flight coordination~\cite{L013,L017,L051}. Communication-constrained simulations further show that coordination performance depends on the traffic information available to decision-makers~\cite{L053}.
 
 \observation{3}{The decision timing, information requirements, and permitted control actions of an existing method determine whether it can support aircraft already in flight when a blockage occurs.}
 
-\section{Disruption Response and Contingency Management}
+\subsection{Disruption Response and Contingency Management}
 \label{sec:literature-4}
 
 Adaptive replanning supports path and timing changes in disturbed environments, whereas contingency landing management addresses aircraft degradation and the feasibility of reaching a landing site~\cite{L012,L066}. Emergency-trajectory studies also coordinate lower-priority aircraft around priority traffic and examine the propagation or mitigation of resulting delays~\cite{L015,L079}. These capabilities address different initiating events and response objectives~\cite{L012,L066,L079}.
 
 \observation{4}{Emergency-response capability is specific to the event and intended outcome: resolving an immediate conflict, completing an emergency landing, and rejoining a route for continued flight require different completion criteria.}
 
-\section{Network Configuration and Resilience}
+\subsection{Network Configuration and Resilience}
 \label{sec:literature-5}
 
 UAM network design connects facility locations, fleet resources, and operating decisions to service provision~\cite{L087}. Disruption-aware design adds backup vertiports and routes to improve expected throughput, although the resulting benefits can differ across origin--destination pairs~\cite{L063}. Node-closure verification separately checks whether diverted flights can be accommodated within available landing capacity under specified routing and travel-time assumptions~\cite{L069}.
 
 \observation{5}{The contribution of redundancy depends on where it is available and how redirected traffic uses it; aggregate network performance does not establish adequate contingency support for every affected flight.}
 
-\section{Performance Evaluation, Uncertainty, and Verification}
+\subsection{Performance Evaluation, Uncertainty, and Verification}
 \label{sec:literature-6}
 
 Simulation studies evaluate throughput, delay, and separation-related outcomes, while service-level methods distinguish aircraft, passenger, and facility performance~\cite{L041,L090}. Verification studies establish properties such as landing-capacity compliance or contingency-trajectory feasibility under specified assumptions~\cite{L066,L069}. Probabilistic airspace models additionally make spatial protection conditional on the uncertainty representation and selected risk level~\cite{L085}.
 
 \observation{6}{Feasibility, safety-related properties, and service performance require distinct evidence; an evaluation must identify the aircraft and network effects being measured and the assumptions under which its conclusions hold.}
 
-\section{Disruption Recovery and Joint Design in Related Transportation Systems}
+\subsection{Disruption Recovery and Joint Design in Related Transportation Systems}
 \label{sec:literature-7}
 
 Recovery studies in railway and airline networks connect infrastructure availability and reassignment decisions to service continuity and subsequent delays~\cite{L054,L060,L004}. Railway infrastructure comparisons evaluate the combined effects of layout and dispatching strategies, while UAM architecture studies likewise find that the performance of spatial arrangements depends on traffic-management choices~\cite{L028,L051,L046}.
 
 \observation{7}{Corridor design improvement requires evaluating spatial changes together with the operating procedures that use them, because the value of a design change depends on traffic coordination and disruption conditions.}
+
+\section{Research Formulation}
+\label{sec:research-formulation}
+
+\subsection{Study Context}
+\label{sec:study-context}
+
+A localized portion of a Cooperative Area (CA) at a fixed location becomes unavailable for passage. The study addresses the rerouting of affected aircraft and the coordination of surrounding traffic within the remaining available CA airspace. For rerouted aircraft, the response ends upon rejoining an available route from which flight can continue.
+
+\subsection{Research Objective}
+\label{sec:research-objective}
+
+\begin{quote}
+\textit{Develop an integrated framework for emergency procedure development, performance evaluation, and corridor design improvement in response to localized blockages within a Cooperative Area.}
+\end{quote}
+
+\subsection{Research Questions}
+\label{sec:research-questions}
+
+\subsubsection{RQ1: Emergency Procedure Development}
+\label{sec:rq1}
+
+\begin{quote}
+\textit{Given a Cooperative Area with a localized portion at a fixed location becomes unavailable for passage, how can emergency procedures be designed to reroute and coordinate affected aircraft within the remaining available airspace while satisfying separation and aircraft performance constraints?}
+\end{quote}
+
+The initial focus is to develop emergency procedures and demonstrate safe, feasible flight for all aircraft represented in a defined case study, including surrounding traffic involved in coordination or separation requirements. Efficiency is not an optimization objective for RQ1. Conclusions about feasibility remain limited to the conditions and assumptions examined.
+
+\subsubsection{RQ2: Performance Evaluation}
+\label{sec:rq2}
+
+\begin{quote}
+\textit{How to select appropriate evaluation metrics and apply them to assess the performance of emergency procedures and corridor designs under localized blockages?}
+\end{quote}
+
+The focus is to select and define suitable metrics, then use them to evaluate procedure and corridor performance, including effects on surrounding traffic and the corridor network. The evaluation should establish a basis for comparing performance and identifying where design improvement is needed.
+
+\subsubsection{RQ3: Corridor Design Improvement}
+\label{sec:rq3}
+
+\begin{quote}
+\textit{How can spatial corridor design and operational design be jointly optimized to improve emergency response performance within a Cooperative Area?}
+\end{quote}
+
+The focus is to improve corridor design through coordinated changes to its spatial arrangement and operating rules, informed by the evaluation developed in RQ2. Candidate improvements must continue to satisfy the safety-related and aircraft performance requirements used in procedure development.
 
 \begin{thebibliography}{99}
 

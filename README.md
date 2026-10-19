@@ -2,8 +2,9 @@
 
 A working proposal draft containing:
 
-1. Seven literature–observation pairs covering the operating context, maneuver feasibility, traffic coordination, contingency response, network resilience, evaluation, and joint design.
-2. The study context, complete Research Objective, and three Research Questions with their scope explanations.
+1. Two background observations (B1–B2) on changing availability and the relationship between normal operations and disruption response.
+2. Seven literature–observation pairs covering the operating context, aircraft performance and energy, traffic coordination, contingency response, network resilience, evaluation, and joint design. The original labels 1–7 are retained.
+3. The study context, a provisional research-gap statement, the Research Objective, and three Research Questions with their scope explanations. RQ2 addresses the evaluation approach; RQ3 includes normal operating efficiency.
 
 ## Open in Overleaf
 

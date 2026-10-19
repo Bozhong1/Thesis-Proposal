@@ -35,14 +35,21 @@ Operating concepts and airspace-design studies for urban air mobility (UAM) rela
 
 Graph abstractions of urban airspace show how its connectivity changes with width and altitude~\cite{L037}. Corridor-protection and contingency-planning studies relate the space needed for maneuvering to the motion limits of the aircraft~\cite{L036,L020}. Emergency-trajectory planning studies account for corridor limits, protected regions around emergency aircraft, and aircraft turning constraints~\cite{L015}.
 
-\observation{2}{Geometric connectivity of the remaining airspace is not enough to show that an executable response exists. Maneuver feasibility depends jointly on that airspace, aircraft performance, and surrounding traffic.}
+\observation{2}{Geometric connectivity of the remaining airspace is not enough to show that an executable response exists. %%语气太强，准确性不够, should be more constrained
+Maneuver feasibility depends jointly on that airspace, aircraft performance, and surrounding traffic.}
+%%Maneuver feasibility用词不准，performance+energy state/soc
+
+
+
 
 \subsection{Traffic Planning and Coordination}
 \label{sec:literature-3}
 
 Strategic methods manage planned interactions through flight-level assignment or through the timing of waypoint occupancy~\cite{L013,L017}. Tactical and hybrid approaches handle conflicts through different combinations of preflight planning and in-flight coordination~\cite{L051}. Simulations with limited communication show that coordination performance changes with the traffic information available to the decision-makers~\cite{L053}.
 
-\observation{3}{The applicability of a method after a blockage depends on its decision timing, information requirements, and permitted control actions. These conditions need to be examined for aircraft that are already in flight when the blockage occurs.}
+\observation{3}{The applicability of a method after a blockage depends on its decision timing, information requirements, and \textbf{permitted control actions}. These conditions need to be examined for aircraft that are already in flight when the blockage occurs.}
+%% the applicability of a "what" method, information availability, airborne
+%%traffic planning, methods
 
 \subsection{Disruption Response and Contingency Management}
 \label{sec:literature-4}
@@ -50,6 +57,8 @@ Strategic methods manage planned interactions through flight-level assignment or
 Adaptive replanning changes flight paths and timing in response to disturbances in the operating environment~\cite{L012}. Contingency landing management assesses whether a degraded aircraft can still reach a landing site~\cite{L066}. Emergency-trajectory studies plan lower-priority flights around priority traffic and examine how the resulting delays propagate or can be reduced~\cite{L015,L079}. These methods address different initiating events and pursue different response objectives~\cite{L012,L066,L079}.
 
 \observation{4}{The outcome used to define a completed response depends on the event and the purpose of the procedure. Resolving an immediate conflict, completing an emergency landing, and rejoining a route to continue a flight require different completion criteria.}
+%%
+
 
 \subsection{Network Configuration and Resilience}
 \label{sec:literature-5}
@@ -57,6 +66,8 @@ Adaptive replanning changes flight paths and timing in response to disturbances 
 UAM network design connects facility locations, fleet resources, and operating decisions to the service the network provides~\cite{L087}. Backup vertiports and routes can increase expected throughput during disruptions, but the gains differ across pairs of origins and destinations~\cite{L063}. Verification methods for node closures assess whether landing capacity can accommodate diverted flights under specified routing and travel-time assumptions~\cite{L069}.
 
 \observation{5}{The benefit of redundancy depends on where it is available and on how redirected traffic uses it. Aggregate network performance alone does not establish whether every affected flight has adequate contingency support.}
+%% correlation between vertiports, origins and destinations, rephrase the second sentence
+
 
 \subsection{Performance Evaluation, Uncertainty, and Verification}
 \label{sec:literature-6}
@@ -71,6 +82,10 @@ Simulation studies report throughput, delay, and separation-related outcomes, an
 Recovery studies in railway and airline networks relate infrastructure availability and resource reassignment to service continuity and subsequent delays~\cite{L054,L060,L004}. Railway studies have evaluated track layout and dispatching strategy together to quantify their combined effect on corridor operations~\cite{L046}. UAM architecture studies also show that spatial arrangements perform differently under different traffic-management approaches~\cite{L028,L051}.
 
 \observation{7}{The effect of a spatial design change depends on how traffic uses the available airspace under the disruption conditions. Therefore, spatial changes and operating procedures need to be evaluated together when improving a corridor design.}
+%%参照ob7
+
+%%可以加一些background observation，real world problem... 2-3 observations
+
 
 \section{Research Formulation}
 \label{sec:research-formulation}
@@ -79,7 +94,7 @@ Recovery studies in railway and airline networks relate infrastructure availabil
 \label{sec:study-context}
 
 This study considers a localized portion of a Cooperative Area (CA) that becomes unavailable for passage at a fixed location. The affected aircraft will be rerouted within the remaining available airspace and coordinated with surrounding traffic. For a rerouted aircraft, the response ends when it rejoins an available route on which its flight can continue.
-
+%%两句话合并一下
 \subsection{Research Objective}
 \label{sec:research-objective}
 
@@ -105,7 +120,7 @@ The work under RQ1 will develop emergency procedures and demonstrate safe and fe
 \begin{quote}
 \textit{How can appropriate evaluation metrics be selected and applied to assess the performance of emergency procedures and corridor designs under localized blockages?}
 \end{quote}
-
+%%写小了，应该是how to evaluate,而不是metric本身。
 The work under RQ2 will select and define metrics for evaluating emergency procedures and corridor designs. The evaluation will include effects on surrounding traffic and the corridor network. These results will provide a basis for comparing performance and identifying where design changes are needed.
 
 \subsubsection{RQ3. Corridor Design Improvement}
@@ -114,8 +129,11 @@ The work under RQ2 will select and define metrics for evaluating emergency proce
 \begin{quote}
 \textit{How can spatial corridor design and operational design be jointly optimized to improve emergency response performance within a Cooperative Area?}
 \end{quote}
-
+%%写小了点，要保证正常运行效率，emergency efficiency只是一部分
 The work under RQ3 will use the evaluation from RQ2 to optimize the spatial arrangement and operating rules together. Each candidate design must satisfy the safety-related and aircraft performance requirements used in procedure development.
+
+
+%%gap statement
 
 \begin{thebibliography}{99}
 

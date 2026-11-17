@@ -25,13 +25,13 @@
 
 \subsection{Changes in Airspace and Facility Availability}
 
-The FAA concept of operations allows UAM corridors to open and close and requires operators to monitor weather and wind conditions before and during flight. In a simulated vertiport closure, two airborne flights were diverted, and one flight awaiting departure was canceled.~\cite{FAA2023_L088, Prince2025_L041}. 
+The Federal Aviation Administration (FAA) concept of operations allows for the opening and closing of urban air mobility (UAM) corridors and states that operators monitor weather and wind conditions both before and during flight~\cite{FAA2023_L088}. In a simulated vertiport closure, two airborne flights were diverted, and one flight awaiting departure was canceled~\cite{Prince2025_L041}.
 
 \observation{B1}{Loss of availability may occur after affected aircraft have departed. Therefore, the response must account for their current flight states and the remaining available options.}
 
 \subsection{Normal Operations and Disruption Response}
 
-A network design with reserve capacity adds backup vertiports to the vertiports that provide regular service~\cite{Wei2024_L063}. Under a fixed infrastructure budget, the backup vertiports are placed where they serve the most demand, and under some network topologies this leaves part of the network with little reserve support~\cite{Wei2024_L063}. The authors suggest examining the tradeoff between operational efficiency and a more even distribution of contingency support~\cite{Wei2024_L063}. Closure verification also accounts for diverted flights and continuing traffic that share landing capacity~\cite{Wei2024_L069}.
+A network design incorporating reserve capacity adds backup vertiports to those providing regular service~\cite{Wei2024_L063}. Under a fixed infrastructure budget, maximizing expected network throughput favors sites likely to serve more demand. In some network topologies, this leaves certain origin-destination pairs with limited reserve support. The authors suggest evaluating the tradeoff between operational efficiency and more even reserve coverage across origin-destination pairs~\cite{Wei2024_L063}. Closure verification also considers diverted flights and ongoing traffic that share landing capacity~\cite{Wei2024_L069}.
 
 \observation{B2}{The same network design supports both normal service and disruption response. Therefore, design comparisons should assess both functions under their respective operating conditions.}
 
@@ -41,50 +41,49 @@ A network design with reserve capacity adds backup vertiports to the vertiports 
 \subsection{Operating Context and Traffic-Management Frameworks}
 \label{sec:literature-1}
 
-Operating concepts and airspace-design studies for urban air mobility (UAM) relate airspace organization to aircraft capabilities, operating procedures, and coordination responsibilities~\cite{FAA2023_L088,Bauranov2021_L024}. Traffic-management studies examine how functions such as access control, flight planning, and conflict management interact and affect shared operations~\cite{Ramee2021_L028,Prince2025_L041}.
+Operating concepts and airspace design studies for UAM relate airspace organization to aircraft capabilities, operating procedures, and coordination responsibilities~\cite{FAA2023_L088,Bauranov2021_L024}. Traffic management studies analyze how functions such as access control, flight planning, and conflict management interact and influence shared operations~\cite{Ramee2021_L028,Prince2025_L041}.
 
-\observation{1}{When a localized portion of the airspace becomes unavailable, affected flights continue to share operating rules and resources with surrounding traffic. The response is therefore a
-traffic-coordination problem as well as a routing problem.}
+\observation{1}{When a localized portion of the airspace becomes unavailable, affected flights continue to share operating rules and resources with surrounding traffic. The response is therefore a traffic-coordination problem as well as a routing problem.}
 
 \subsection{Airspace Geometry, Aircraft Performance, and Energy}
 \label{sec:literature-2}
 
-A graph abstraction of urban airspace shows how its connectivity changes with the required passage width and with altitude~\cite{Cho2021_L037}. Corridor-protection and contingency-planning studies relate the space needed for maneuvering to the motion limits of the aircraft~\cite{Choi2026_L036,Ortlieb2021_L020}. Contingency landing management assesses reachability using the current aircraft state, performance model, and estimated battery end-of-discharge time~\cite{Kim2026_L066}. Emergency-trajectory planning accounts for corridor limits, the protected region around an emergency aircraft, and aircraft turning constraints~\cite{Variny2025_L015}.
+A graph-based abstraction of urban airspace illustrates how connectivity varies with required passage width and altitude~\cite{Cho2021_L037}. Corridor protection and contingency planning studies relate the maneuvering space required to the motion limits of the aircraft~\cite{Choi2026_L036,Ortlieb2021_L020}. Contingency landing management evaluates reachability based on the current aircraft state, performance model, and estimated battery end-of-discharge time~\cite{Kim2026_L066}. Emergency trajectory planning considers corridor limits, the protected region around an emergency aircraft, and aircraft turning constraints~\cite{Variny2025_L015}.
 
 \observation{2}{The space and energy needed for a response depend on the aircraft state and performance limits. Therefore, candidate routes through the remaining airspace need to be checked for these requirements and for separation from surrounding traffic.}
 
 \subsection{Traffic Planning and Coordination}
 \label{sec:literature-3}
 
-Strategic and pre-tactical methods manage planned interactions through flight-level assignment~\cite{Tang2021_L013} or through the timing of waypoint occupancy~\cite{Pang2024_L017}. Tactical and hybrid approaches handle conflicts through different combinations of preflight planning and in-flight coordination~\cite{Veytia2022_L051}. In simulations with communication latency and loss, separation performance was slightly lower than in earlier results with perfect communication and differed between centralized and decentralized control~\cite{Yang2020_L053}.
+Strategic and pre-tactical methods manage planned interactions through flight-level assignment or waypoint occupancy timing~\cite{Tang2021_L013,Pang2024_L017}. Tactical and hybrid approaches address conflicts using various combinations of preflight planning and in-flight coordination~\cite{Veytia2022_L051}. Simulations involving communication latency and loss demonstrated slightly reduced separation performance compared to earlier results with perfect communication, and performance varied between centralized and decentralized control~\cite{Yang2020_L053}.
 
 \observation{3}{Traffic-planning and coordination methods differ in their decision timing, information requirements, and permitted changes to flight level, timing, or trajectory. Their use after a blockage depends on whether these requirements and permitted actions match the information and options available for aircraft already airborne.}
 
 \subsection{Disruption Response and Contingency Management}
 \label{sec:literature-4}
 
-Adaptive replanning changes flight paths and timing in response to disturbances in the operating environment~\cite{Wu2021_L012}. Contingency landing management assesses whether a degraded aircraft can still reach a landing site~\cite{Kim2026_L066}. Emergency-trajectory studies plan lower-priority flights around priority traffic~\cite{Variny2025_L015,PintoNeto2025_L079}, and one of them examines how the resulting delays propagate and can be reduced~\cite{Variny2025_L015}. These methods address different initiating events and pursue different response objectives~\cite{Wu2021_L012,Kim2026_L066,PintoNeto2025_L079}.
+Adaptive replanning modifies flight paths and timing in response to disturbances in the operating environment~\cite{Wu2021_L012}. Contingency landing management determines whether a degraded aircraft can reach a landing site~\cite{Kim2026_L066}. Emergency trajectory studies plan lower-priority flights around priority traffic~\cite{Variny2025_L015,PintoNeto2025_L079}, with one study examining how the resulting delays propagate and can be mitigated~\cite{Variny2025_L015}. These methods address distinct initiating events and pursue different response objectives~\cite{Wu2021_L012,Kim2026_L066,PintoNeto2025_L079}.
 
 \observation{4}{The outcome used to define a completed response depends on the event and the purpose of the procedure. Resolving an immediate conflict, completing an emergency landing, and rejoining a route to continue a flight require different completion criteria.}
 
 \subsection{Network Configuration and Resilience}
 \label{sec:literature-5}
 
-UAM network design connects facility locations, fleet resources, and operating decisions to the service the network provides~\cite{Wang2025_L087}. Backup vertiports and routes can increase expected throughput during disruptions, but the gains differ across pairs of origins and destinations~\cite{Wei2024_L063}. Closure verification accounts for diverted flights that share backup landing capacity with flights from other routes and with continuing traffic~\cite{Wei2024_L069}. Simulation-based replanning also checks subsequent flights that depend on the same aircraft or vertiport resources~\cite{Prince2025_L041}.
+UAM network design links facility locations, fleet resources, and operating decisions to the services provided by the network~\cite{Wang2025_L087}. Backup vertiports and routes can enhance expected throughput during disruptions, although the benefits vary across different origin-destination pairs~\cite{Wei2024_L063}. Closure verification considers diverted flights that share backup landing capacity with flights from other routes and with ongoing traffic~\cite{Wei2024_L069}. Simulation-based replanning also evaluates subsequent flights that rely on the same aircraft or vertiport resources~\cite{Prince2025_L041}.
 
 \observation{5}{Flights from different origins and destinations may depend on the same backup vertiports and connecting routes. Their combined demand on these resources needs to be considered when evaluating redundancy during a disruption.}
 
 \subsection{Performance Evaluation, Uncertainty, and Verification}
 \label{sec:literature-6}
 
-A simulation evaluation reports throughput, delay, and separation-related outcomes~\cite{Prince2025_L041}, and a level-of-service method assesses passenger, air taxi operator, and vertiport operator performance with separate metrics~\cite{Schweiger2023_L090}. Verification studies establish properties such as landing-capacity compliance or the feasibility of contingency trajectories, but only under the assumptions they specify~\cite{Kim2026_L066,Wei2024_L069}. A probabilistic airspace model relates the required protected space to the uncertainty representation and the selected risk level~\cite{Hu2026_L085}.
+Simulation evaluations report throughput, delay, and separation-related outcomes~\cite{Prince2025_L041}, while level-of-service methods assess passenger, air taxi operator, and vertiport operator performance using distinct metrics~\cite{Schweiger2023_L090}. Verification studies establish properties such as landing-capacity compliance or the feasibility of contingency trajectories, but only under specified assumptions~\cite{Wei2024_L069,Kim2026_L066}. A probabilistic airspace model relates the required protected space to the uncertainty representation and the chosen risk level~\cite{Hu2026_L085}.
 
 \observation{6}{Feasibility, safety-related properties, and service performance are different kinds of claims and call for different evidence. An evaluation needs to distinguish these claims and state the aircraft and network effects measured and the assumptions under which its conclusions hold.}
 
 \subsection{Disruption Recovery and Joint Design in Related Transportation Systems}
 \label{sec:literature-7}
 
-Disruption studies in railway and airline networks relate infrastructure availability and resource reassignment to service continuity and subsequent delays~\cite{Trommelen2022_L054,Zhu2019_L060,Suh2017_L004}. A railway corridor study evaluated track layout and dispatching strategy together to quantify their combined effect on corridor operations~\cite{Tosstorff2026_L046}. In UAM, the effect of an airspace structure was found to depend on the traffic-management approach~\cite{Ramee2021_L028}, and different separation-management concepts distributed traffic differently over the same airspace~\cite{Veytia2022_L051}.
+Disruption studies in railway and airline networks connect infrastructure availability and resource reassignment to service continuity and subsequent delays~\cite{Trommelen2022_L054,Zhu2019_L060,Suh2017_L004}. One railway corridor study evaluated track layout and dispatching strategy jointly to quantify their combined effect on corridor operations~\cite{Tosstorff2026_L046}. In UAM, the impact of airspace structure depends on the traffic management approach~\cite{Ramee2021_L028}, and different separation management concepts distribute traffic differently over the same airspace~\cite{Veytia2022_L051}.
 
 \observation{7}{The effect of a spatial design change depends on how traffic uses the available airspace under the disruption conditions. Therefore, spatial changes and operating procedures need to be evaluated together when improving a corridor design.}
 
@@ -94,18 +93,18 @@ Disruption studies in railway and airline networks relate infrastructure availab
 \subsection{Study Context}
 \label{sec:study-context}
 
-This study addresses aircraft rerouting and surrounding-traffic coordination when a localized portion of a Cooperative Area (CA) becomes unavailable at a fixed location. A CA is an airspace volume, such as a UAM corridor, within which operations are cooperatively managed~\cite{FAA2023_L088}. The response takes place within the remaining available airspace and ends for each rerouted aircraft when it rejoins an available route for continued flight.
+This study examines aircraft rerouting and surrounding traffic coordination when a localized portion of a Cooperative Area (CA) becomes unavailable at a fixed location. A CA refers to an airspace volume, such as a UAM corridor, within which operations can be cooperatively managed~\cite{FAA2023_L088}. The response occurs within the remaining available airspace and concludes for each rerouted aircraft when it rejoins an available route for continued flight.
 
 \subsection{Research Gap and Study Focus}
 \label{sec:research-gap}
 
-Existing studies provide methods for trajectory planning, contingency management, closure verification, and network design under their respective operating assumptions~\cite{Variny2025_L015,Kim2026_L066,Wei2024_L069,Wei2024_L063}. For the localized blockage considered here, the research need is to connect aircraft-level response feasibility with corridor-level evaluation and design improvement. This connection requires consistent treatment of aircraft state and energy, surrounding traffic, shared resources, and performance during normal operations. The gap to be examined is whether existing methods support this connection under a common set of operating assumptions. A targeted comparison will distinguish capabilities that can be reused from those that require further development.
+Existing studies offer methods for trajectory planning, contingency management, closure verification, and network design under their respective operating assumptions~\cite{Variny2025_L015,Kim2026_L066,Wei2024_L069,Wei2024_L063}. For the localized blockage addressed in this study, there is a need to connect aircraft-level response feasibility with corridor-level evaluation and design improvement. Achieving this connection requires consistent treatment of aircraft state and energy, surrounding traffic, shared resources, and performance during normal operations. The research gap to be examined is whether existing methods support this connection under a unified set of operating assumptions. A targeted comparison will identify capabilities that can be reused and those requiring further development.
 
 \subsection{Research Objective}
 \label{sec:research-objective}
 
 \begin{quote}
-\textit{This study aims to develop an integrated framework for emergency procedure development, performance evaluation, and corridor design improvement under localized blockages within a Cooperative Area. The framework will assess emergency response together with the efficiency of normal operations.}
+\textit{This study seeks to develop an integrated framework for emergency procedure development, performance evaluation, and corridor design improvement under localized blockages within a Cooperative Area. The framework will evaluate emergency response in conjunction with the efficiency of normal operations.}
 \end{quote}
 
 \subsection{Research Questions}
@@ -118,7 +117,7 @@ Existing studies provide methods for trajectory planning, contingency management
 \textit{A localized portion of a Cooperative Area at a fixed location becomes unavailable for passage. How can emergency procedures be designed to reroute and coordinate affected aircraft within the remaining available airspace while satisfying separation, aircraft performance, and energy constraints?}
 \end{quote}
 
-The work under RQ1 will develop emergency procedures and demonstrate safe and feasible flight for every aircraft represented in a defined case study. The assessment will include each aircraft's current flight state and remaining energy, together with surrounding traffic subject to coordination or separation requirements. Efficiency will not be an optimization objective in RQ1. Any conclusion about feasibility will apply only to the conditions and assumptions examined.
+The work under RQ1 will develop emergency procedures and demonstrate safe and feasible flight for each aircraft represented in a defined case study. The assessment will consider each aircraft's current flight state and remaining energy, as well as surrounding traffic subject to coordination or separation requirements. Efficiency will not serve as an optimization objective in RQ1. Any conclusions regarding feasibility will apply only to the specific conditions and assumptions examined.
 
 \subsubsection{RQ2. Performance Evaluation}
 \label{sec:rq2}
@@ -127,16 +126,16 @@ The work under RQ1 will develop emergency procedures and demonstrate safe and fe
 \textit{How can emergency procedures and corridor designs be evaluated to assess their effects on aircraft and network performance under localized blockages?}
 \end{quote}
 
-The work under RQ2 will establish an evaluation approach that connects procedure and corridor design choices to aircraft and network outcomes. It will define the operating conditions, comparison cases, evaluation period, and metrics needed to interpret those outcomes. The evaluation will assess constraint satisfaction, response completion, and effects on surrounding traffic. Normal operations will provide a reference for design comparisons.
+The research conducted under RQ2 will develop an evaluation framework that links procedure and corridor design decisions to aircraft and network-level outcomes. This framework will specify operating conditions, comparison scenarios, evaluation periods, and metrics required for outcome interpretation. The assessment will address constraint satisfaction, response completion, and impacts on adjacent traffic. Normal operations will serve as a baseline for design comparisons.
 
-\subsubsection{RQ3. Corridor Design Improvement}
+\subsubsection{RQ3. Corridor Design Optimization}
 \label{sec:rq3}
 
 \begin{quote}
-\textit{How can spatial corridor design and operational design be jointly optimized to improve emergency response while maintaining normal operating efficiency within a Cooperative Area?}
+\textit{How can spatial corridor design and operational procedures be jointly optimized to enhance emergency response while preserving normal operational efficiency within a Cooperative Area?}
 \end{quote}
 
-The work under RQ3 will use the evaluation from RQ2 to examine spatial arrangements and operating rules together. Candidate designs will be compared for both normal operations and localized blockages. Emergency response improvements will be assessed alongside any changes in normal operating efficiency. Each candidate must satisfy the separation, aircraft performance, and energy requirements used in procedure development. The criteria for acceptable normal performance will be defined before optimization.
+The research under RQ3 will utilize the evaluation framework from RQ2 to jointly analyze spatial configurations and operational rules. Candidate designs will be evaluated for both routine operations and scenarios involving localized blockages. Improvements in emergency response will be assessed in conjunction with any impacts on normal operational efficiency. Each candidate must meet the separation, aircraft performance, and energy requirements established during procedure development. Criteria for acceptable normal performance will be specified prior to optimization.
 
 \begin{thebibliography}{99}
 

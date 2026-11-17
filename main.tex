@@ -25,13 +25,13 @@
 
 \subsection{Changes in Airspace and Facility Availability}
 
-The FAA concept of operations provides for UAM corridors to be opened and closed and calls for operators to monitor weather and winds before and during flight~\cite{L088}. In a simulated vertiport closure, two airborne flights were diverted and a flight awaiting departure was canceled~\cite{L041}.
+The FAA concept of operations provides for UAM corridors to be opened and closed and calls for operators to monitor weather and winds before and during flight~\cite{FAA2023_L088}. In a simulated vertiport closure, two airborne flights were diverted and a flight awaiting departure was canceled~\cite{Prince2025_L041}.
 
 \observation{B1}{Loss of availability may occur after affected aircraft have departed. The response must then account for their current flight states and the options that remain available.}
 
 \subsection{Normal Operations and Disruption Response}
 
-A network design with reserve capacity adds backup vertiports to the vertiports that provide regular service~\cite{L063}. Under a fixed infrastructure budget, the backup vertiports are placed where they serve the most demand, and under some network topologies this leaves part of the network with little reserve support~\cite{L063}. The authors suggest examining the tradeoff between operational efficiency and a more even distribution of contingency support~\cite{L063}. Closure verification also accounts for diverted flights and continuing traffic that share landing capacity~\cite{L069}.
+A network design with reserve capacity adds backup vertiports to the vertiports that provide regular service~\cite{Wei2024_L063}. Under a fixed infrastructure budget, the backup vertiports are placed where they serve the most demand, and under some network topologies this leaves part of the network with little reserve support~\cite{Wei2024_L063}. The authors suggest examining the tradeoff between operational efficiency and a more even distribution of contingency support~\cite{Wei2024_L063}. Closure verification also accounts for diverted flights and continuing traffic that share landing capacity~\cite{Wei2024_L069}.
 
 \observation{B2}{The same network design supports normal service and provides resources for disruption response. Design comparisons therefore need to assess both uses under their respective operating conditions.}
 
@@ -41,49 +41,49 @@ A network design with reserve capacity adds backup vertiports to the vertiports 
 \subsection{Operating Context and Traffic-Management Frameworks}
 \label{sec:literature-1}
 
-Operating concepts and airspace-design studies for urban air mobility (UAM) relate airspace organization to aircraft capabilities, operating procedures, and coordination responsibilities~\cite{L088,L024}. Traffic-management studies examine how functions such as access control, flight planning, and conflict management interact and affect shared operations~\cite{L028,L041}.
+Operating concepts and airspace-design studies for urban air mobility (UAM) relate airspace organization to aircraft capabilities, operating procedures, and coordination responsibilities~\cite{FAA2023_L088,Bauranov2021_L024}. Traffic-management studies examine how functions such as access control, flight planning, and conflict management interact and affect shared operations~\cite{Ramee2021_L028,Prince2025_L041}.
 
 \observation{1}{When a localized portion of the airspace becomes unavailable, the affected flights still share operating rules and resources with the surrounding traffic. The response is therefore a traffic-coordination problem as well as a routing problem.}
 
 \subsection{Airspace Geometry, Aircraft Performance, and Energy}
 \label{sec:literature-2}
 
-A graph abstraction of urban airspace shows how its connectivity changes with the required passage width and with altitude~\cite{L037}. Corridor-protection and contingency-planning studies relate the space needed for maneuvering to the motion limits of the aircraft~\cite{L036,L020}. Contingency landing management assesses reachability using the current aircraft state, performance model, and estimated battery end-of-discharge time~\cite{L066}. Emergency-trajectory planning accounts for corridor limits, the protected region around an emergency aircraft, and aircraft turning constraints~\cite{L015}.
+A graph abstraction of urban airspace shows how its connectivity changes with the required passage width and with altitude~\cite{Cho2021_L037}. Corridor-protection and contingency-planning studies relate the space needed for maneuvering to the motion limits of the aircraft~\cite{Choi2026_L036,Ortlieb2021_L020}. Contingency landing management assesses reachability using the current aircraft state, performance model, and estimated battery end-of-discharge time~\cite{Kim2026_L066}. Emergency-trajectory planning accounts for corridor limits, the protected region around an emergency aircraft, and aircraft turning constraints~\cite{Variny2025_L015}.
 
 \observation{2}{The space and energy needed for a response depend on the aircraft state and performance limits. Therefore, candidate routes through the remaining airspace need to be checked for these requirements and for separation from surrounding traffic.}
 
 \subsection{Traffic Planning and Coordination}
 \label{sec:literature-3}
 
-Strategic and pre-tactical methods manage planned interactions through flight-level assignment~\cite{L013} or through the timing of waypoint occupancy~\cite{L017}. Tactical and hybrid approaches handle conflicts through different combinations of preflight planning and in-flight coordination~\cite{L051}. In simulations with communication latency and loss, separation performance was slightly lower than in earlier results with perfect communication and differed between centralized and decentralized control~\cite{L053}.
+Strategic and pre-tactical methods manage planned interactions through flight-level assignment~\cite{Tang2021_L013} or through the timing of waypoint occupancy~\cite{Pang2024_L017}. Tactical and hybrid approaches handle conflicts through different combinations of preflight planning and in-flight coordination~\cite{Veytia2022_L051}. In simulations with communication latency and loss, separation performance was slightly lower than in earlier results with perfect communication and differed between centralized and decentralized control~\cite{Yang2020_L053}.
 
 \observation{3}{Traffic-planning and coordination methods differ in their decision timing, information requirements, and permitted changes to flight level, timing, or trajectory. Their use after a blockage depends on whether these requirements and permitted actions match the information and options available for aircraft already airborne.}
 
 \subsection{Disruption Response and Contingency Management}
 \label{sec:literature-4}
 
-Adaptive replanning changes flight paths and timing in response to disturbances in the operating environment~\cite{L012}. Contingency landing management assesses whether a degraded aircraft can still reach a landing site~\cite{L066}. Emergency-trajectory studies plan lower-priority flights around priority traffic~\cite{L015,L079}, and one of them examines how the resulting delays propagate and can be reduced~\cite{L015}. These methods address different initiating events and pursue different response objectives~\cite{L012,L066,L079}.
+Adaptive replanning changes flight paths and timing in response to disturbances in the operating environment~\cite{Wu2021_L012}. Contingency landing management assesses whether a degraded aircraft can still reach a landing site~\cite{Kim2026_L066}. Emergency-trajectory studies plan lower-priority flights around priority traffic~\cite{Variny2025_L015,PintoNeto2025_L079}, and one of them examines how the resulting delays propagate and can be reduced~\cite{Variny2025_L015}. These methods address different initiating events and pursue different response objectives~\cite{Wu2021_L012,Kim2026_L066,PintoNeto2025_L079}.
 
 \observation{4}{The outcome used to define a completed response depends on the event and the purpose of the procedure. Resolving an immediate conflict, completing an emergency landing, and rejoining a route to continue a flight require different completion criteria.}
 
 \subsection{Network Configuration and Resilience}
 \label{sec:literature-5}
 
-UAM network design connects facility locations, fleet resources, and operating decisions to the service the network provides~\cite{L087}. Backup vertiports and routes can increase expected throughput during disruptions, but the gains differ across pairs of origins and destinations~\cite{L063}. Closure verification accounts for diverted flights that share backup landing capacity with flights from other routes and with continuing traffic~\cite{L069}. Simulation-based replanning also checks subsequent flights that depend on the same aircraft or vertiport resources~\cite{L041}.
+UAM network design connects facility locations, fleet resources, and operating decisions to the service the network provides~\cite{Wang2025_L087}. Backup vertiports and routes can increase expected throughput during disruptions, but the gains differ across pairs of origins and destinations~\cite{Wei2024_L063}. Closure verification accounts for diverted flights that share backup landing capacity with flights from other routes and with continuing traffic~\cite{Wei2024_L069}. Simulation-based replanning also checks subsequent flights that depend on the same aircraft or vertiport resources~\cite{Prince2025_L041}.
 
 \observation{5}{Flights from different origins and destinations may depend on the same backup vertiports and connecting routes. Their combined demand on these resources needs to be considered when evaluating redundancy during a disruption.}
 
 \subsection{Performance Evaluation, Uncertainty, and Verification}
 \label{sec:literature-6}
 
-A simulation evaluation reports throughput, delay, and separation-related outcomes~\cite{L041}, and a level-of-service method assesses passenger, air taxi operator, and vertiport operator performance with separate metrics~\cite{L090}. Verification studies establish properties such as landing-capacity compliance or the feasibility of contingency trajectories, but only under the assumptions they specify~\cite{L066,L069}. A probabilistic airspace model relates the required protected space to the uncertainty representation and the selected risk level~\cite{L085}.
+A simulation evaluation reports throughput, delay, and separation-related outcomes~\cite{Prince2025_L041}, and a level-of-service method assesses passenger, air taxi operator, and vertiport operator performance with separate metrics~\cite{Schweiger2023_L090}. Verification studies establish properties such as landing-capacity compliance or the feasibility of contingency trajectories, but only under the assumptions they specify~\cite{Kim2026_L066,Wei2024_L069}. A probabilistic airspace model relates the required protected space to the uncertainty representation and the selected risk level~\cite{Hu2026_L085}.
 
 \observation{6}{Feasibility, safety-related properties, and service performance are different kinds of claims and call for different evidence. An evaluation needs to distinguish these claims and state the aircraft and network effects measured and the assumptions under which its conclusions hold.}
 
 \subsection{Disruption Recovery and Joint Design in Related Transportation Systems}
 \label{sec:literature-7}
 
-Disruption studies in railway and airline networks relate infrastructure availability and resource reassignment to service continuity and subsequent delays~\cite{L054,L060,L004}. A railway corridor study evaluated track layout and dispatching strategy together to quantify their combined effect on corridor operations~\cite{L046}. In UAM, the effect of an airspace structure was found to depend on the traffic-management approach~\cite{L028}, and different separation-management concepts distributed traffic differently over the same airspace~\cite{L051}.
+Disruption studies in railway and airline networks relate infrastructure availability and resource reassignment to service continuity and subsequent delays~\cite{Trommelen2022_L054,Zhu2019_L060,Suh2017_L004}. A railway corridor study evaluated track layout and dispatching strategy together to quantify their combined effect on corridor operations~\cite{Tosstorff2026_L046}. In UAM, the effect of an airspace structure was found to depend on the traffic-management approach~\cite{Ramee2021_L028}, and different separation-management concepts distributed traffic differently over the same airspace~\cite{Veytia2022_L051}.
 
 \observation{7}{The effect of a spatial design change depends on how traffic uses the available airspace under the disruption conditions. Therefore, spatial changes and operating procedures need to be evaluated together when improving a corridor design.}
 
@@ -93,12 +93,12 @@ Disruption studies in railway and airline networks relate infrastructure availab
 \subsection{Study Context}
 \label{sec:study-context}
 
-This study addresses aircraft rerouting and surrounding-traffic coordination when a localized portion of a Cooperative Area (CA) becomes unavailable at a fixed location. A CA is an airspace volume, such as a UAM corridor, within which operations are cooperatively managed~\cite{L088}. The response takes place within the remaining available airspace and ends for each rerouted aircraft when it rejoins an available route for continued flight.
+This study addresses aircraft rerouting and surrounding-traffic coordination when a localized portion of a Cooperative Area (CA) becomes unavailable at a fixed location. A CA is an airspace volume, such as a UAM corridor, within which operations are cooperatively managed~\cite{FAA2023_L088}. The response takes place within the remaining available airspace and ends for each rerouted aircraft when it rejoins an available route for continued flight.
 
 \subsection{Research Gap and Study Focus}
 \label{sec:research-gap}
 
-Existing studies provide methods for trajectory planning, contingency management, closure verification, and network design under their respective operating assumptions~\cite{L015,L066,L069,L063}. For the localized blockage considered here, the research need is to connect aircraft-level response feasibility with corridor-level evaluation and design improvement. This connection requires consistent treatment of aircraft state and energy, surrounding traffic, shared resources, and performance during normal operations. The gap to be examined is whether existing methods support this connection under a common set of operating assumptions. A targeted comparison will distinguish capabilities that can be reused from those that require further development.
+Existing studies provide methods for trajectory planning, contingency management, closure verification, and network design under their respective operating assumptions~\cite{Variny2025_L015,Kim2026_L066,Wei2024_L069,Wei2024_L063}. For the localized blockage considered here, the research need is to connect aircraft-level response feasibility with corridor-level evaluation and design improvement. This connection requires consistent treatment of aircraft state and energy, surrounding traffic, shared resources, and performance during normal operations. The gap to be examined is whether existing methods support this connection under a common set of operating assumptions. A targeted comparison will distinguish capabilities that can be reused from those that require further development.
 
 \subsection{Research Objective}
 \label{sec:research-objective}
@@ -139,76 +139,76 @@ The work under RQ3 will use the evaluation from RQ2 to examine spatial arrangeme
 
 \begin{thebibliography}{99}
 
-\bibitem{L088}
+\bibitem{FAA2023_L088}
 Federal Aviation Administration, ``Urban Air Mobility (UAM) Concept of Operations,'' Ver. 2.0, NextGen Office, Washington, D.C., April 2023.
 
-\bibitem{L041}
+\bibitem{Prince2025_L041}
 Prince, J., Guerreiro, N., Denham, C., McClain, T., Ghatas, R., and White, T., ``Feasibility and Scalability of Midterm UAM Operations in Cooperative Airspace: Class B Airspace Simulation Evaluation,'' NASA/TM-20250009519, NASA Langley Research Center, Dec. 2025.
 
-\bibitem{L063}
+\bibitem{Wei2024_L063}
 Wei, Q., Gao, Z., Clarke, J.-P., and Topcu, U., ``Risk-Aware Urban Air Mobility Network Design with Overflow Redundancy,'' \emph{Transportation Research Part B: Methodological}, Vol. 185, 2024, Article 102967. \url{https://doi.org/10.1016/j.trb.2024.102967}.
 
-\bibitem{L069}
+\bibitem{Wei2024_L069}
 Wei, Q., Nilsson, G., and Coogan, S., ``Safe Schedule Verification for Urban Air Mobility Networks With Node Closures,'' \emph{IEEE Transactions on Control of Network Systems}, Vol. 11, No. 2, 2024, pp. 855--866. \url{https://doi.org/10.1109/TCNS.2023.3314570}.
 
-\bibitem{L024}
+\bibitem{Bauranov2021_L024}
 Bauranov, A., and Rakas, J., ``Designing Airspace for Urban Air Mobility: A Review of Concepts and Approaches,'' \emph{Progress in Aerospace Sciences}, Vol. 125, 2021, Article 100726. \url{https://doi.org/10.1016/j.paerosci.2021.100726}.
 
-\bibitem{L028}
+\bibitem{Ramee2021_L028}
 Ram\'{e}e, C., and Mavris, D., ``Development of a Framework to Compare Low-Altitude Unmanned Air Traffic Management Systems,'' \emph{AIAA Scitech 2021 Forum}, AIAA Paper 2021-0812, 2021. \url{https://doi.org/10.2514/6.2021-0812}.
 
-\bibitem{L037}
+\bibitem{Cho2021_L037}
 Cho, J., and Yoon, Y., ``Extracting the Topology of Urban Airspace Through Graph Abstraction,'' \emph{Transportation Research Part C: Emerging Technologies}, Vol. 127, 2021, Article 103116. \url{https://doi.org/10.1016/j.trc.2021.103116}.
 
-\bibitem{L036}
+\bibitem{Choi2026_L036}
 Choi, S.-i., Yang, Y., and Kim, H., ``Establishing Corridor Design Standards for Operational Safety of Urban Air Mobility Vehicles,'' \emph{International Journal of Aeronautical and Space Sciences}, Vol. 27, 2026, pp. 863--875. \url{https://doi.org/10.1007/s42405-025-00960-4}.
 
-\bibitem{L020}
+\bibitem{Ortlieb2021_L020}
 Ortlieb, M., Adolf, F.-M., and Holzapfel, F., ``Computation of a Database of Trajectories and Primitives for Decision-Based Contingency Management of UAVs over Congested Areas,'' \emph{2021 IEEE/AIAA 40th Digital Avionics Systems Conference (DASC)}, 2021. \url{https://doi.org/10.1109/DASC52595.2021.9594333}.
 
-\bibitem{L066}
+\bibitem{Kim2026_L066}
 Kim, J., Sharma, P., Castagno, J., Neogi, N., and Atkins, E., ``Runtime Performance Verification of Assured Contingency Landing Management for Advanced Air Mobility,'' \emph{Journal of Aerospace Information Systems}, Vol. 23, No. 2, 2026, pp. 155--173. \url{https://doi.org/10.2514/1.I011675}.
 
-\bibitem{L015}
+\bibitem{Variny2025_L015}
 Variny, M. R., Moleski, T. W., and Wilhelm, J. P., ``Cascading Delay Mitigation with Quadratic B\'{e}zier Curve Trajectory Planning,'' \emph{AIAA SCITECH 2025 Forum}, AIAA Paper 2025-1545, 2025. \url{https://doi.org/10.2514/6.2025-1545}.
 
-\bibitem{L013}
+\bibitem{Tang2021_L013}
 Tang, H., Zhang, Y., Mohmoodian, V., and Charkhgard, H., ``Automated Flight Planning of High-Density Urban Air Mobility,'' \emph{Transportation Research Part C: Emerging Technologies}, Vol. 131, 2021, Article 103324. \url{https://doi.org/10.1016/j.trc.2021.103324}.
 
-\bibitem{L017}
+\bibitem{Pang2024_L017}
 Pang, B., Low, K. H., and Duong, V. N., ``Chance-Constrained UAM Traffic Flow Optimization with Fast Disruption Recovery under Uncertain Waypoint Occupancy Time,'' \emph{Transportation Research Part C: Emerging Technologies}, Vol. 161, 2024, Article 104547. \url{https://doi.org/10.1016/j.trc.2024.104547}.
 
-\bibitem{L051}
+\bibitem{Veytia2022_L051}
 Veytia, A. M., Badea, C. A., Ellerbroek, J., Hoekstra, J., Patrinopoulou, N., Daramouskas, I., Lappas, V., Kostopoulos, V., de Vries, V., van Ham, J., Sunil, E., Menendez Ponte Alonso, P., Rodrigo Villazon Terrazas, J., Bereziat, D., Vidosavljevic, A., and Sedov, L., ``Metropolis II: Benefits of Centralised Separation Management in High-Density Urban Airspace,'' \emph{12th SESAR Innovation Days}, Budapest, Hungary, 2022, pp. 1--8.
 
-\bibitem{L053}
+\bibitem{Yang2020_L053}
 Yang, X., Deng, L., Liu, J., Wei, P., and Li, H., ``Multi-Agent Autonomous Operations in Urban Air Mobility with Communication Constraints,'' \emph{AIAA SciTech 2020 Forum}, AIAA Paper 2020-1839, 2020. \url{https://doi.org/10.2514/6.2020-1839}.
 
-\bibitem{L012}
+\bibitem{Wu2021_L012}
 Wu, Y., and Low, K. H., ``An Adaptive Path Replanning Method for Coordinated Operations of Drone in Dynamic Urban Environments,'' \emph{IEEE Systems Journal}, Vol. 15, No. 3, 2021, pp. 4600--4611. \url{https://doi.org/10.1109/JSYST.2020.3017677}.
 
-\bibitem{L079}
+\bibitem{PintoNeto2025_L079}
 Pinto Neto, E. C., Baum, D., de Almeida, J. R., Jr., Camargo, J. B., Jr., and Cugnasca, P. S., ``Towards Planning Urban Air Mobility (UAM) Landing Trajectories in Emergencies,'' \emph{Journal of Intelligent \& Robotic Systems}, Vol. 111, 2025, Article 22. \url{https://doi.org/10.1007/s10846-024-02213-0}.
 
-\bibitem{L087}
+\bibitem{Wang2025_L087}
 Wang, Z., Lv, D., Jia, S., Wang, K., and Qu, X., ``Urban Air Mobility Network Design and Operations Strategy in an Urban Agglomeration,'' \emph{Transportation Research Part E: Logistics and Transportation Review}, Vol. 203, 2025, Article 104316. \url{https://doi.org/10.1016/j.tre.2025.104316}.
 
-\bibitem{L090}
+\bibitem{Schweiger2023_L090}
 Schweiger, K., and Knabe, F., ``Vertidrome Airside Level of Service: Performance-Based Evaluation of Vertiport Airside Operations,'' \emph{Drones}, Vol. 7, No. 11, 2023, Article 671. \url{https://doi.org/10.3390/drones7110671}.
 
-\bibitem{L085}
+\bibitem{Hu2026_L085}
 Hu, X., Pang, B., Alam, S., and Feroskhan, M., ``U-Aerodrome: Data-Driven and Risk-Bounded Airspace Reconfiguration for Safe Integration of Urban Air Mobility at Aerodrome,'' \emph{Transportation Research Part C: Emerging Technologies}, Vol. 184, 2026, Article 105506. \url{https://doi.org/10.1016/j.trc.2025.105506}.
 
-\bibitem{L054}
+\bibitem{Trommelen2022_L054}
 Trommelen, W., Gkiotsalitis, K., and van Berkum, E. C., ``Optimization Model for Rail Line Crossover Design Considering the Cost of Delay,'' \emph{Transportation Research Record}, Vol. 2676, No. 4, 2022, pp. 554--569. \url{https://doi.org/10.1177/03611981211062488}.
 
-\bibitem{L060}
+\bibitem{Zhu2019_L060}
 Zhu, Y., and Goverde, R. M. P., ``Railway Timetable Rescheduling with Flexible Stopping and Flexible Short-Turning during Disruptions,'' \emph{Transportation Research Part B: Methodological}, Vol. 123, 2019, pp. 149--181. \url{https://doi.org/10.1016/j.trb.2019.02.015}.
 
-\bibitem{L004}
+\bibitem{Suh2017_L004}
 Suh, D., and Ryerson, M. S., ``A Large Neighborhood Search Heuristic to Establish an Optimal Ad-Hoc Hubbing Strategy in the Wake of a Large-Scale Airport Outage,'' \emph{Journal of Air Transport Management}, Vol. 65, 2017, pp. 156--165. \url{https://doi.org/10.1016/j.jairtraman.2017.06.006}.
 
-\bibitem{L046}
+\bibitem{Tosstorff2026_L046}
 Tosstorff, M., and Weik, N., ``Infrastructure Design for Robust Operations on Railway Corridors---Quantifying the Combined Effects of Overtaking Tracks and Dispatching Strategies,'' \emph{Transportation Research Procedia}, Vol. 95, 2026, pp. 720--727. \url{https://doi.org/10.1016/j.trpro.2026.02.091}.
 
 \end{thebibliography}

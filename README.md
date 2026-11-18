@@ -11,7 +11,7 @@ This repository contains the LaTeX source of a working draft of the thesis propo
    - Network configuration and resilience
    - Performance evaluation, uncertainty, and verification
    - Disruption recovery and joint design in related transportation systems
-3. Research formulation. This part states the study context and a provisional research gap, then gives the Research Objective and three Research Questions with a description of the work under each question. Research Question 2 concerns how emergency procedures and corridor designs are evaluated. Research Question 3 also considers the efficiency of normal operations.
+3. Research formulation. This part states the study context and three provisional research gaps, then gives the Research Objective and three Research Questions with a description of the work and a working hypothesis under each question. An overarching hypothesis follows. Research Question 1 explores whether a feasible response exists. Research Question 2 concerns how a localized blockage affects aircraft and network performance for different emergency procedures and network designs. Research Question 3 concerns the joint improvement of the network design and the operating procedures, and it also considers the efficiency of normal operations.
 
 ## Opening the project in Overleaf
 
@@ -19,7 +19,7 @@ Import this repository into Overleaf, or download it from GitHub as a ZIP file a
 
 - Main document: `main.tex`
 - Compiler: XeLaTeX
-- References: 24 entries in American Institute of Aeronautics and Astronautics (AIAA) format, written directly in `main.tex`
+- References: 25 entries in American Institute of Aeronautics and Astronautics (AIAA) format, written directly in `main.tex`
 
 The project does not need a separate bibliography file or a custom document class. Citations use LaTeX citation keys, and the references are numbered in order of first appearance.
 
